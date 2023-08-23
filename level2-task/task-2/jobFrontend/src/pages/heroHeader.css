@@ -1,0 +1,51 @@
+.mainHeroSection {
+  overflow: hidden;
+}
+
+.row.flow {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.main__heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main__sub {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.main__button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.section__img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .main {
+    text-align: center;
+  }
+
+  .section__img {
+    display: none;
+  }
+}

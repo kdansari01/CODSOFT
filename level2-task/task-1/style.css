@@ -1,0 +1,599 @@
+/* ===================================
+	Import Font
+====================================== */
+
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi");
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800");
+
+/* ==========================
+	Global Styles
+=============================*/
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: #2f2f2f;
+}
+
+h1 {
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3em;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+h3,
+h2 {
+  font-family: "reem Kufi", sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.7em;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-family: "open sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  color: #222;
+}
+
+p > small {
+  display: block;
+  color: #757575;
+}
+
+@media only screen and (max-width: 991px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+  .col--container {
+    margin-bottom: 3em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: unset;
+}
+
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/*all containers boxes*/
+
+.bio--container,
+.award--container,
+.timeline--box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  padding: 1em 1em 1em 1em;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  transition: all 350ms ease 0s;
+}
+
+.bio--container::before,
+.award--container::before,
+.timeline--box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 8px;
+  left: 0;
+  top: 0;
+}
+
+.bio--container:hover,
+.bio--container:hover .icon--container,
+.award--container:hover,
+.award--container:hover .icon--container,
+.timeline--box:hover,
+.timeline--box:hover .icon--container {
+  box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.15);
+}
+
+.icon--container > i {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =============
+	header
+================*/
+
+header {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero--container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url("https://e1.pxfuel.com/desktop-wallpaper/257/917/desktop-wallpaper-apj-abdul-kalam-a.jpg")
+    center center / cover no-repeat;
+  padding: 8em 2em 10em 2em;
+}
+
+.hero--container h1 {
+  margin: 0;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.title--container h1 {
+  margin-bottom: 0;
+}
+
+.title--container h3 {
+  margin-top: 0.3em;
+}
+
+.picture--container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  bottom: -7em;
+  background: #fff;
+}
+
+.picture {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: inherit;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("http://cafeinacodificada.com.br/wp-content/uploads/2017/02/ritchie-japan-prize1.jpg")
+    center / cover no-repeat;
+}
+.profile_Picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.title--container {
+  position: relative;
+  text-align: center;
+  margin-top: 7em;
+}
+
+@media only screen and (max-width: 991px) {
+  .hero--container {
+    padding: 6em 2em 10em 2em;
+  }
+  .hero--container h1 {
+    line-height: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero--container {
+    padding: 3em 1.5em 5.5em 1.5em;
+  }
+  .hero--container h1 {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+  .picture--container {
+    width: 160px;
+    height: 160px;
+  }
+  .picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ============================
+	Info container
+===============================*/
+
+#info--section {
+  position: relative;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.bio--container h2 {
+  padding-left: 0;
+}
+
+.bio--container::before {
+  background: #9659a7;
+}
+
+.bio--container .icon--container {
+  background: #9659a7;
+  top: 1.5em;
+  right: 2em;
+}
+
+.award--container::before {
+  background: #f5720f;
+}
+
+.award--container .icon--container {
+  background: #f5720f;
+  top: 1.5em;
+  right: 2em;
+}
+
+.award p {
+  margin-bottom: 0;
+  line-height: 1.3em;
+}
+
+.award p small {
+  margin-top: 0;
+}
+
+.award {
+  position: relative;
+  padding: 0.5em 1em 0.5em 3em;
+  margin: 1em 0 1em 0;
+  box-shadow: 0 10px 20px #eee, 0 6px 6px #eee;
+  transition: all 300ms ease 0s;
+}
+
+.award:hover {
+  margin-left: 3px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.award::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 300ms ease 0s;
+}
+
+.award:hover::before {
+  width: 3px;
+}
+
+.award i {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1em;
+}
+
+.a1 i {
+  color: #880e4f;
+}
+
+.a1::before {
+  background: #880e4f;
+}
+
+.a2 i {
+  color: #8e24aa;
+}
+
+.a2::before {
+  background: #8e24aa;
+}
+
+.a3 i {
+  color: #d9437f;
+}
+
+.a3::before {
+  background: #d9437f;
+}
+
+.a4 i {
+  color: #f35956;
+}
+
+.a4::before {
+  background: #f35956;
+}
+
+.a5 i {
+  color: #f1c500;
+}
+
+.a5::before {
+  background: #f1c500;
+}
+
+/* hero images */
+
+.image--container {
+  position: relative;
+  width: 100%;
+  padding: 5em 2em 5em 2em;
+}
+
+@media only screen and (max-width: 991px) {
+  .image--container {
+    padding: 3em 2em 3em 2em;
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.c1 {
+  background: url("https://e0.pxfuel.com/wallpapers/791/254/desktop-wallpaper-most-powerful-apj-abdul-kalam-quotes-that-will-make-you-mad-quotesays.jpg")
+    center / cover no-repeat fixed;
+}
+
+.c2 {
+  background: url("https://e1.pxfuel.com/desktop-wallpaper/379/452/desktop-wallpaper-25-apj-abdul-kalam-apj-abdul-kalam.jpg")
+    center / cover no-repeat fixed;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.image--container h1 {
+  font-family: "Catamaran", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5em;
+  color: #fff;
+  z-index: 5;
+}
+
+/* ===================================
+	highlights_section
+====================================== */
+
+.timeline--section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.highlights_section h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+}
+
+.list-group-item {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: #f9f9f9;
+}
+
+.row {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  position: relative;
+}
+
+.row--left {
+  padding-left: 1.5em;
+}
+
+.row--right {
+  padding-right: 1.5em;
+}
+
+.timeline--circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.timeline--circle > * {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+}
+
+.timeline--box {
+  padding: 2.5em 1.5em 2.5em 1.5em;
+}
+
+.r1 .timeline--box::before,
+.r1 .timeline--circle,
+.r1 .icon--container {
+  background: #880e4f;
+  width: 100px;
+}
+
+.r2 .timeline--box::before,
+.r2 .timeline--circle,
+.r2 .icon--container {
+  background: #8e24aa;
+  width: 100px;
+}
+
+.r3 .timeline--box::before,
+.r3 .timeline--circle,
+.r3 .icon--container {
+  background: #d9437f;
+  width: 100px;
+}
+
+.r4 .timeline--box::before,
+.r4 .timeline--circle,
+.r4 .icon--container {
+  background: #f1c500;
+  width: 100px;
+}
+
+.r5 .timeline--box::before,
+.r5 .timeline--circle,
+.r5 .icon--container {
+  background: #004d40;
+  width: 100px;
+}
+
+.timeline--box .icon--container {
+  right: 2em;
+  top: 1.5em;
+}
+
+.timeline--box h3 {
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .straight--line {
+    left: 8.3em;
+    transform: translateX(0%) translateY(-50%);
+  }
+  .timeline--circle {
+    left: 3em;
+    transform: translate(-0%, -50%);
+  }
+  .row--left {
+    padding-left: 0;
+  }
+  .row--right {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .straight--line {
+    left: 10%;
+    height: 79%;
+    transform: translateX(-10%) translateY(-50%);
+  }
+  .timeline--circle {
+    width: 100px;
+    height: 100px;
+    left: 4%;
+    transform: translate(-4%, -50%);
+  }
+  .timeline--circle h2 {
+    font-size: 2em;
+  }
+  .timeline--col--container {
+    left: 70%;
+    transform: translateX(-70%);
+  }
+}
+@media only screen and (max-width: 668px) {
+  .timeline--circle {
+    left: 1%;
+    top: 10%;
+    transform: translate(-1%, -10%);
+  }
+  .straight--line {
+    left: 3.5em;
+    height: 77%;
+    top: 11%;
+    transform: translateX(-0%) translateY(-11%);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .timeline--circle {
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(0%);
+    margin-bottom: 2em;
+  }
+  .straight--line {
+    display: none;
+  }
+  .timeline--col--container {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+}

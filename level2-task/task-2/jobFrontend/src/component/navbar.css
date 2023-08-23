@@ -1,0 +1,180 @@
+.navbar-toggler {
+  outline: none;
+  padding: 0;
+  font-size: 1rem;
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+}
+.logoSec {
+  display: flex;
+  width: 5rem;
+}
+
+.NavMain {
+  background: rgba(255, 251, 255, 0.1);
+  box-shadow: 0 0px 8px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (min-width: 700px) {
+  .NavItems {
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .NavItems:before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .NavItems:hover {
+    background-position: 0;
+  }
+
+  .NavItems:hover::before {
+    width: 100%;
+  }
+
+  .NavList {
+    display: flex;
+    justify-content: center;
+  }
+  .NavItems {
+    margin-right: 35px;
+  }
+
+  .active {
+    border-bottom: 2px solid rgb(14, 14, 14);
+    color: black;
+    font-weight: bold;
+  }
+  .iconSec {
+    margin-left: 10px;
+  }
+  .icons {
+    font-size: 2rem;
+    margin-left: 5px;
+  }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  .NavList {
+    text-align: center;
+  }
+
+  .active {
+    color: rgb(248, 3, 3);
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .logoSec {
+    display: block;
+  }
+  .profileVisible {
+    display: none;
+  }
+  .pcProfile {
+    display: block;
+  }
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  .logoSec {
+    display: none;
+  }
+  .profileVisible {
+    display: block;
+  }
+  .pcProfile {
+    display: none;
+  }
+}
+
+.btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media (min-width: 992px) and (max-width: 1800px) {
+  .btn-menu {
+    display: none;
+  }
+}
+
+.btn-menu:focus {
+  outline: none;
+}
+
+.btn-menu__text {
+  margin-left: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.btn-menu__bars {
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 3px;
+  background-color: black; /* Assuming $primary is a variable */
+  transition: 0.3s;
+}
+
+.btn-menu__bars:before,
+.btn-menu__bars:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Assuming $primary is a variable */
+  transition: 0.3s;
+}
+
+.btn-menu__bars:before {
+  transform: translate(0, -11px);
+}
+
+.btn-menu__bars:after {
+  transform: translate(0, 11px);
+}
+
+.menu-open .btn-menu .btn-menu__bars {
+  background-color: transparent;
+}
+
+.menu-open .btn-menu .btn-menu__bars:before {
+  transform: rotate(45deg);
+}
+
+.menu-open .btn-menu .btn-menu__bars:after {
+  transform: rotate(-45deg);
+}
